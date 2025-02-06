@@ -10,7 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: fitia-princia-portfolio
 */
 
-/* 🎨 Palette de couleurs inspirée du PDF */
+/*  Palette de couleurs */
 
 :root {
     --bg-color: #ffffff;
@@ -25,7 +25,7 @@ a {
     color: inherit; /* Inherit color from parent element */
 }
 
-/* 🌟 Structure générale */
+/*  Structure générale */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -52,7 +52,7 @@ section {
     padding: 20px;
 }
 
-/* 🌟 Header */
+/*  Header */
 header {
    /*background: var(--accent-color);
     */
@@ -85,7 +85,7 @@ header {
 }
 
 
-/* 🌟 Logo */
+/* Logo */
 .logo h3 {
     text-decoration: none;
     color: var(--text-color);
@@ -96,7 +96,7 @@ header {
     }
 
 
-/* 🌟 Menu */
+/* Menu */
 .menu {
     list-style: none;
     display: flex;
@@ -187,7 +187,7 @@ header {
     background-color: #ccc;
 }
 
-/* 🌟 Projects Section */
+/*  Projects Section */
 #projects {
     text-align: center;
     padding: 100px 0;
@@ -245,7 +245,7 @@ header {
     line-height: 1.6;
 }
 
-/* 🌟 Responsive */
+/*  Responsive */
 @media (max-width: 768px) {
     .project-card {
         width: 90%;
@@ -255,7 +255,7 @@ header {
         max-width: 300px;
     }
 }
-/* 🌟 Resume Section */
+/*  Resume Section */
 #resume {
     padding: 100px 0;
     background-color: #f9f9f9;
@@ -269,7 +269,7 @@ header {
     text-transform: uppercase;
 }
 
-/* 🌟 Resume Container */
+/*  Resume Container */
 .resume-container {
     display: flex;
     align-items: flex-start;
@@ -277,14 +277,14 @@ header {
     margin: 0 auto;
 }
 
-/* 🌟 Resume Content */
+/*  Resume Content */
 .resume-content {
     width: 75%;
     padding-right: 20px;
     text-align: left;
 }
 
-/* 🌟 Resume Sections (Hidden by Default) */
+/*  Resume Sections (Hidden by Default) */
 .resume-section {
     display: none;
 }
@@ -302,7 +302,7 @@ header {
     justify-content: space-between; /* Space between the cards */
     margin-bottom: 20px; /* Space between rows */
 }
-/* 🌟 Resume Cards */
+/*  Resume Cards */
 .resume-card {
     width: 60%;
     flex: 1;
@@ -320,7 +320,7 @@ header {
 .resume-card:not(:first-child) {
     margin-left: 10px; /* Espace entre les cartes */
 }
-/* 🌟 Skills & Interests Layout */
+/*  Skills & Interests Layout */
 .skills-interests {
     display: flex;
     justify-content: center;
@@ -328,7 +328,7 @@ header {
     margin-top: 50px;
 }
 
-/* 🌟 Skills & Interests Cards */
+/*  Skills & Interests Cards */
 .skills, .interests {
     width: 40%;
     padding: 20px;
@@ -337,7 +337,7 @@ header {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* 🌟 Icons + Text */
+/*  Icons + Text */
 .skills-list, .interests-list {
     display: flex;
     flex-direction: column;
@@ -438,7 +438,7 @@ header {
     flex-direction: column;
 }
 
-/* 🌟 Contact Info */
+/*  Contact Info */
 .contact-info h2 {
     font-size: 2.5em;
     color: var(--highlight-color);
@@ -478,7 +478,7 @@ header {
     margin-top: 10px;
 }
 
-/* 🌟 Responsive */
+/*  Responsive */
 @media (max-width: 768px) {
     .contact-container {
         width: 100%;
