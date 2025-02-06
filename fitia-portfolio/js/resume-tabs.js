@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     targetSection.classList.add('active');
                 }
             }
-            // If there's no targetId, it means it's an external link, so do not prevent default
+            // If there's no targetId, it means it's an external link
         });
     });
 
@@ -74,7 +74,6 @@ document.addEventListener("DOMContentLoaded", function () {
             tabs.forEach(t => t.classList.remove("active"));
             this.classList.add("active");
 
-            // Hide all sections and show the selected one
             const target = this.getAttribute("data-target");
             sections.forEach(sec => sec.classList.remove("active"));
             document.getElementById(target).classList.add("active");
