@@ -1,0 +1,604 @@
+/*
+Theme Name: Fitia Portfolio
+Theme URI: http://example.com
+Author: Andriamparany Fitia Princia
+Author URI: http://example.com
+Description: Un thème de portfolio pour Fitia Princia.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: fitia-princia-portfolio
+*/
+
+/* 🎨 Palette de couleurs inspirée du PDF */
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333;
+    --accent-color: #ffffff;
+    --highlight-color: #775533;
+    --section-bg: #fefdfc;
+    
+}
+a {
+    text-decoration: none; /* Remove underline from all links */
+    color: inherit; /* Inherit color from parent element */
+}
+
+/* 🌟 Structure générale */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+.section {
+    display: none; /* Hide all sections by default */
+}
+
+.section.active {
+    display: block; /* Show only the active section */
+}
+
+
+
+/* Section styles */
+section {
+     /* Add some padding */
+    border: 1px solid #f9f8f8; /* Optional: Add a border */
+    margin: 10px 0; /* Space between sections */
+    background-color: #f9f9f9; /* Light background color */
+    padding: 20px;
+}
+
+/* 🌟 Header */
+header {
+   /*background: var(--accent-color);
+    */
+    background-color: #ffffff;
+    color: #333;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto;
+    gap: 10px;
+    width: 100%;
+}
+.container1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 18px 15px;
+    /*padding: 0 20px;
+    gap: -10px;*/
+}
+
+
+/* 🌟 Logo */
+.logo h3 {
+    text-decoration: none;
+    color: var(--text-color);
+    margin: 0; 
+    font-size: 28px; 
+    font-weight: bold; 
+   letter-spacing: 5px; 
+    }
+
+
+/* 🌟 Menu */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu a:hover {
+    color: var(--highlight-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+    }
+}
+
+/* About Section */
+#about {
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    background-color: #fdfdfd;
+}
+
+.about-container {
+    display: flex;
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.about-image img {
+    width: 350px;
+    height: 750px;
+    object-fit: cover;
+    max-width: 1000px;
+    margin-top: 20px;
+}
+
+.about-text {
+    font-family: 'Arial, sans-serif';
+    font-size: 18px;
+    margin-left: 40px;
+    text-align: left;
+}
+
+.about-text h2 {
+    font-family: 'Georgia , serif';
+    font-size: 70px;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 2px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    color: #000000;
+    background-color: #ffffff;
+    border-radius: 28px;
+    border: 2px solid #000000;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #ccc;
+}
+
+/* 🌟 Projects Section */
+#projects {
+    text-align: center;
+    padding: 100px 0;
+    background-color: #f9f9f9;
+}
+
+#projects h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+/*  Project Cards - Centered & Stacked */
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+/*  Individual Project Card */
+.project-card {
+    width: 60%;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/*  Project Image */
+.project-card img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/*  Project Text */
+.project-card h3 {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* 🌟 Responsive */
+@media (max-width: 768px) {
+    .project-card {
+        width: 90%;
+    }
+
+    .project-card img {
+        max-width: 300px;
+    }
+}
+/* 🌟 Resume Section */
+#resume {
+    padding: 100px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#resume h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+/* 🌟 Resume Container */
+.resume-container {
+    display: flex;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* 🌟 Resume Content */
+.resume-content {
+    width: 75%;
+    padding-right: 20px;
+    text-align: left;
+}
+
+/* 🌟 Resume Sections (Hidden by Default) */
+.resume-section {
+    display: none;
+}
+
+.resume-section.active {
+    display: block;
+}
+.resume-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.resume-row {
+    display: flex;
+    justify-content: space-between; /* Space between the cards */
+    margin-bottom: 20px; /* Space between rows */
+}
+/* 🌟 Resume Cards */
+.resume-card {
+    width: 60%;
+    flex: 1;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    /*margin: 10px auto ;*/
+    margin-right: 10px;
+}
+.resume-card:last-child {
+    margin-right: 0; /* Remove margin from the last card in the row */
+}
+.resume-card:not(:first-child) {
+    margin-left: 10px; /* Espace entre les cartes */
+}
+/* 🌟 Skills & Interests Layout */
+.skills-interests {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+/* 🌟 Skills & Interests Cards */
+.skills, .interests {
+    width: 40%;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 🌟 Icons + Text */
+.skills-list, .interests-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.skill-item, .interest-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skill-item img, .interest-item img {
+    width: 30px;
+    height: 30px;
+}
+/*  Navigation Menu (Right Side) */
+.resume-menu {
+    width: 25%;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.resume-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resume-menu li {
+    margin-bottom: 15px;
+}
+
+.resume-menu a {
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--text-color);
+    display: block;
+    padding: 8px 0;
+    transition: color 0.3s ease-in-out;
+}
+
+.resume-menu a:hover,
+.resume-menu a.active {
+    color: var(--highlight-color);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .resume-card {
+        width: 90%;
+    }
+
+    .skills-interests {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .skills, .interests {
+        width: 80%;
+    }
+    .resume-menu {
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .resume-menu ul {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .resume-menu li {
+        margin-bottom: 0;
+    }
+}
+
+
+
+
+
+/* Contact Section */
+#contact {
+    padding: 120px 0;
+    background-color: #f4f1eb;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    max-width: 700px;
+    width: 90%;
+    text-align: center;
+    flex-direction: column;
+}
+
+/* 🌟 Contact Info */
+.contact-info h2 {
+    font-size: 2.5em;
+    color: var(--highlight-color);
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin: 10px 0;
+}
+
+.contact-info a {
+    color: var(--highlight-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* QR Code */
+.qr-code {
+    margin-top: 30px;
+}
+
+.qr-code img {
+    width: 150px;
+    height: 150px;
+}
+
+.qr-code p {
+    font-size: 1em;
+    color: var(--text-color);
+    margin-top: 10px;
+}
+
+/* 🌟 Responsive */
+@media (max-width: 768px) {
+    .contact-container {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .qr-code img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+
+/* Pied de page */
+footer {
+    background: var(--accent-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* General Styling */
+.diy-gallery {
+    text-align: center;
+    background-color: #f8e8dd; /* Warm nude background */
+    padding: 40px 20px;
+}
+
+.diy-gallery h2 {
+    text-align: center; /* Center the text */
+    margin: 10px 0; /* Margin for spacing */
+    font-size: 2.5em;
+    color: #8b5e3c; /* Warm brown */
+    font-family: 'Playfair Display', serif;
+}
+
+/* Close Button Styles */
+.close-btn {
+    display: block; /* Make it a block element */
+    margin: 20px auto; /* Center it horizontally and add margin */
+    background-color: #ff4d4d; /* Red background color */
+    color: #ffffff; /* White text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for size */
+    font-size: 1em; /* Font size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    width: 150px; /* Set a fixed width for the button */
+}
+
+/* Hover Effect */
+.close-btn:hover {
+    background-color: #ff1a1a; /* Darker red on hover */
+}
+
+/* Centered Description */
+.gallery-description {
+    text-align: center; /* Center the text */
+    margin: 10px 0; /* Margin for spacing */
+    font-size: 1.2em; /* Font size */
+}
+
+/* Centered Description */
+.gallery-description {
+    text-align: center; /* Center the text */
+    margin: 10px 0; /* Margin for spacing */
+    font-size: 1.2em; /* Font size */
+}
+
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    max-width: 600px; /* Set a max width for the carousel */
+    margin: 20px auto; /* Center the carousel */
+    overflow: hidden; /* Hide overflow */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.carousel-inner {
+    display: flex; /* Use flexbox for horizontal layout */
+    transition: transform 0.5s ease; /* Smooth transition */
+}
+
+.carousel-item {
+    min-width: 100%; /* Each item takes full width */
+    box-sizing: border-box; /* Include padding and border in width */
+    text-align: center; /* Center text */
+}
+
+.carousel-item img {
+    width: 100%; /* Responsive image */
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border: none; /* No border */
+    border-radius: 50%; /* Circular buttons */
+    padding: 10px; /* Padding for size */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 24px; /* Font size for arrows */
+    color: #333; /* Arrow color */
+    z-index: 10; /* Ensure buttons are above other elements */
+}
+
+.carousel-control.prev {
+    left: 10px; /* Position left */
+}
+
+.carousel-control.next {
+    right: 10px; /* Position right */
+}
+
+.carousel-control:hover {
+    background-color: rgba(255, 255, 255, 1); /* Full opacity on hover */
+}
+
