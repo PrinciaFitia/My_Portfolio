@@ -85,7 +85,7 @@
         <!-- Resume Content (Only One Section Visible at a Time) -->
         <div class="resume-content">
 
-            <!-- 🔹 Education Section -->
+            <!-- Education Section -->
             <div id="education" class="resume-section active">
                 
                 <div class="resume-column">
@@ -128,7 +128,7 @@
                 </div>
             </div>
 
-            <!-- 🔹 Experience Section -->
+            <!--  Experience Section -->
             <div id="experience" class="resume-section">
                 <div class="resume-column">
                 <div class="resume-row">
@@ -151,7 +151,7 @@
                 </div>
             </div>
 
-            <!-- 🔹 Skills & Interests Section -->
+            <!--  Skills & Interests Section -->
             <div id="skills" class="resume-section">
                 <div class="skills-interests">
                     <!-- Skills -->
